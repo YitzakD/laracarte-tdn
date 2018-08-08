@@ -1,0 +1,1510 @@
+/**
+*   DAF dafstyle.css
+*   @module DAFStyle
+*   @namespace daf-
+*   @namespace dev-
+*/
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .........................  OVERLORD & RESET  ........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Reseter
+*   Cleaner
+*/
+* {
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    color: rgba(74, 74, 74, 1);
+    min-height: 100%;
+}
+
+
+/**
+*   Wrap
+*   @wrap     Conteneur principal du site
+*   Le header d'une page (contenant généralemnt le logo, le menu, la bare de recherche etc...)
+*/
+.wrap {
+    width: 100%;
+    min-height: 100%;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+
+/**
+*   Scrollbar
+*   Stylisation de la barre de defilement
+*/
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar,
+div::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track {
+    background-color: #EFEFEF;
+}
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+    background-color: #D4CDC2;
+    transition: all .7s;
+}
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover,
+div::-webkit-scrollbar-thumb:hover {
+    background-color: #EEB643;
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    ..............................  HEADER  .............................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Dev header
+*   @dev-header     Sa hauteur est par défaut définie à 35px
+*   Le header d'une page (contenant généralemnt le logo, le menu, la bare de recherche etc...)
+*/
+.dev-header {
+    width: 100%;
+    height: 35px;
+    position: fixed;
+    z-index: 200;
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    ........................  SYSTEME DE GRILLE  ........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Div simple
+*   @dev-div
+*   Div full width qui float = gauche
+*/
+.dev-div {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+/**
+*   Dev row
+*   @dev-row
+*   Initialisation de la grille
+*/
+.dev-row {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+/**
+*   Dev col
+*   @dev-col
+*   Elément de la grille (système de 12)
+*/
+.dev-col {
+    float: left;
+    margin: 0 0 0 1%;
+}
+.dev-col:first-child {margin-left: 0;}
+.dev-col-1x {width: 7.416%;}
+.dev-col-2x {width: 15.83%;}
+.dev-col-3x {width: 24.25%;}
+.dev-col-4x {width: 32.66%;}
+.dev-col-5x {width: 41.08%;}
+.dev-col-6x {width: 49.5%;}
+.dev-col-7x {width: 57.91%;}
+.dev-col-8x {width: 66.33%;}
+.dev-col-9x {width: 74.75%;}
+.dev-col-10x {width: 83.16%;}
+.dev-col-11x {width: 91.58%;}
+.dev-col-12x {width: 100%;}
+
+/**
+*   Max screen size 980px
+*   @grid system
+*   Elément de la grille (système de 12)
+*/
+@media only screen and (max-width:980px) {
+    .dev-row {width: 100%;}
+    .dev-col {margin: 0 0 0 0.5%;}
+    .dev-col:first-child {margin-left: 0;}
+    .dev-col-1x {width: 7.875%;}
+    .dev-col-2x {width: 16.25%;}
+    .dev-col-3x {width: 24.625%;}
+    .dev-col-4x {width: 33%;}
+    .dev-col-5x {width: 41.375%;}
+    .dev-col-6x {width: 49.75%;}
+    .dev-col-7x {width: 58.125%;}
+    .dev-col-8x {width: 66.5%;}
+    .dev-col-9x {width: 74.875%;}
+    .dev-col-10x {width: 83.25%;}
+    .dev-col-11x {width: 91.625%;}
+    .dev-col-12x {width: 100%;}
+}
+
+/**
+*   Max screen size 500px
+*   @grid system
+*   Elément de la grille (système de 12)
+*/
+@media only screen and (max-width:500px) {
+    .dev-row {width: 100%;}
+    .dev-col {margin: 0;}
+    .dev-col-1x,.dev-col-2x,.dev-col-3x,
+    .dev-col-4x,.dev-col-5x,.dev-col-6x ,
+    .dev-col-7x,.dev-col-8x,.dev-col-9x,
+    .dev-col-10x,.dev-col-11x,.dev-col-12x {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+/**
+*   Dev col
+*   @dev-col-min-(xxx) Ancien système de grille
+*/
+.dev-col-min-small,
+.dev-col-min-moy,
+.dev-col-min-big {
+    display: inline-block;
+    float: left;
+    min-height: 100%;
+}
+.dev-col-min-small {width: 15%!important;}
+.dev-col-min-moy {width: 33.33%!important;}
+.dev-col-min-big {width: 73.1%!important;}
+
+.dev-col-moy-small,
+.dev-col-moy-moy,
+.dev-col-moy-big {
+    display: inline-block;
+    float: left;
+    min-height: 100%;
+}
+.dev-col-moy-small {width: 20% !important;}
+.dev-col-moy-moy {width: 63.33% !important;}
+.dev-col-moy-big {width: 78.1% !important;}
+
+.dev-col-max-small,
+.dev-col-max-moy,
+.dev-col-max-big {
+    display: inline-block;
+    float: left;
+    min-height: 100%;
+}
+.dev-col-max-small {width: 25% !important;}
+.dev-col-max-moy {width: 68.33% !important;}
+.dev-col-max-big {width: 83.1% !important;}
+.dev-col-max-big-plus {
+    display: block;
+    float: left;
+    color: #222222;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .......................  MENU ET NAVIGATION  ........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Menu
+*	@menu Menu vertical
+*	@nav Menu horizontal
+*	Initialiastions
+*/
+.menu,
+.nav,
+.nav ul,
+.menu ul {
+    margin: 0;
+    padding: 0;
+	position: relative;
+}
+
+/**
+*   Nav
+*	@nav Menu horizontal
+*/
+.nav,
+.nav-hs-1x,
+.nav-hs-2x,
+.nav-hs-3x,
+.nav-hs-4x,
+.nav ul {
+    height: 100%;
+    border-top: none;
+}
+.nav li a,
+.nav-hs-1x li a,
+.nav-hs-2x li a,
+.nav-hs-3x li a,
+.nav-hs-4x li a {
+    text-decoration: none;
+    color: #404041;
+    transition: all .2s;
+    line-height: 250%;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+.nav-hs-1x li a,
+.nav-hs-4x li a {
+	line-height: 250%;
+	padding: 9px 10px 10px 10px;
+}
+.nav-hs-2x li a {
+	line-height: 300%;
+	padding: 4px 10px 5px 10px;
+}
+.nav-hs-3x li a {
+	line-height: 250%;
+	padding: 9px 10px 5px 10px;
+}
+.nav-hs-4x li a {
+	padding: 9px 10px 5px 10px;
+}
+.nav li {
+    position: relative;
+    color: #000000;
+    list-style: none;
+    margin-bottom: 0 !important;
+    float: left;
+}
+.nav li:hover > a {
+    color: #F15624;
+}
+.nav-hs-1x li:hover > a,
+.nav-hs-2x li:hover > a {
+    background-color: #F15624;
+	color: #F7F7F7;
+}
+.nav-hs-2x li:hover > a {
+    border-radius: 3px;
+}
+.nav-hs-3x li:hover > a {
+    border-bottom: 5px solid #F15624;
+}
+.nav-hs-4x li:hover > a {
+    background-color: #404041;
+	color: #F7F7F7;
+    border-bottom: 5px solid #F15624;
+}
+.nav li > .link-active {
+    color: #F15624;
+}
+.nav-hs-1x li > .link-active,
+.nav-hs-2x li > .link-active {
+	background-color: #F15624;
+	color: #F7F7F7;
+}
+.nav-hs-2x li > .link-active {
+	border-radius: 3px;
+}
+.nav-hs-3x li > .link-active {
+	border-bottom: 5px solid #F15624;
+}
+.nav-hs-4x li > .link-active {
+	background-color: #404041;
+	color: #F7F7F7;
+	border-bottom: 5px solid #F15624;
+}
+.nav ul,
+.nav-hs-1x ul,
+.nav-hs-2x ul,
+.nav-hs-3x ul,
+.nav-hs-4x ul {
+    position: absolute;
+    min-width: 120px;
+    height: auto;
+    background-color: #F7F7F7;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+}
+.menu-dropDown {
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    display: none;
+    z-index: 100;
+}
+.nav li ul li {
+    display: block;
+    float: left;
+    margin-bottom: 0 !important;
+}
+.nav li ul a {
+    padding: 10px 7px;
+    display: block;
+    float: left;
+    min-width: 150px;
+    line-height: 10px !important;
+    color: #404041;
+    font-weight: normal;
+    text-align: left;
+    cursor: pointer;
+}
+.nav ul a:hover {
+    color: #F15624;
+}
+.nav-hs-1x ul a:hover,
+.nav-hs-2x ul a:hover,
+.nav-hs-3x ul a:hover {
+    background-color: #F15624;
+	color:  #F7F7F7;
+	border-radius: 0!important;
+}
+.nav-hs-4x ul a:hover {
+    background-color: #404041;
+	color:  #F7F7F7;
+	border-bottom: 0!important;
+}
+.nav li:hover .menu-dropDown {
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    display: block;
+}
+.nav li:last-child ul {
+    left: auto;
+    right: 0;
+}
+
+/**
+*   Menu
+*	@menu Menu vertical
+*/
+.menu li a {
+    text-decoration: none;
+    color: #404041;
+    transition: all .2s;
+    display: block;
+    padding: 10px 7px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.menu li {
+    position: relative;
+    color: #404041;
+    list-style: none;
+    margin-bottom: 0 !important;
+}
+.menu li:hover > a,
+.menu li:focus > a {
+    color: #F15624;
+}
+.menu-vs-1x li:hover > a,
+.menu-vs-1x li:focus > a {
+    background-color: #F15624;
+	color: #F7F7F7;
+}
+.menu-vs-2x li:hover > a,
+.menu-vs-2x li:focus > a {
+    background-color: #39B54A;
+    border-right: 10px solid #F15624;
+	color: #F7F7F7;
+}
+.menu li a.link-active {
+	color: #F15624;
+    font-weight: bolder;
+}
+.menu li a.link-active:hover,
+.menu li a.link-active:focus {
+    font-weight: bolder;
+}
+.menu-vs-1x li a.link-active {
+	background-color: #F15624;
+	color: #F7F7F7;
+    font-weight: bolder;
+}
+.menu-vs-1x li a.link-active:hover,
+.menu-vs-1x li a.link-active:focus {
+	background-color: #F15624!important;
+	color: #F7F7F7;
+    font-weight: bolder;
+}
+.menu-vs-2x li a.link-active {
+	background-color: #39B54A;
+    border-right: 10px solid #F15624;
+	color: #F7F7F7;
+    font-weight: bolder;
+}
+.menu-vs-2x li a.link-active:hover,
+.menu-vs-2x li a.link-active:focus {
+	background-color: #39B54A!important;
+    border-right: none;
+	color: #F7F7F7;
+    font-weight: bolder;
+}
+.menu ul {
+    position: absolute;
+    height: auto;
+    background-color: #F7F7F7;
+    left: 100%;
+    top: 0;
+    font-size: 12px;
+}
+.menu-dropRight {
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    display: none;
+    z-index: 100;
+}
+.menu li ul li {
+    display: block;
+    margin-bottom: 0;
+}
+.menu li ul a,
+.menu-vs-1x li ul a {
+    padding: 12px 7px;
+    text-transform: capitalize;
+    display: block;
+    float: left;
+    min-width: 150px;
+    line-height: 10px;
+    color: #404041;
+    font-weight: normal;
+    text-align: left;
+    cursor: pointer;
+}
+.menu-vs-2x li ul a {
+	border-right: 10px solid transparent;
+}
+.menu li ul a:hover {
+    color: #F15624;
+}
+.menu-vs-1x li ul a:hover {
+    background-color: #F15624;
+	color: #F7F7F7;
+}
+.menu-vs-2x li ul a:hover {
+	background-color: #39B54A;
+    border-right: 10px solid #F15624;
+	color: #F7F7F7;
+}
+.menu li:hover .menu-dropRight {
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .................  LIENS 6 FORMULAIRE & BOUTTONS  ...................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Link
+*	@btn-link liens simple
+*	Initialiastions
+*/
+.btn-link,
+.btn-link:hover {
+	color: #F15624;
+}
+
+
+/**
+*   Formus
+*	@form-group
+*	Initialiastions
+*/
+.form-group label {
+    display: block;
+}
+
+/**
+*   Form text fields
+*	@daf-form-ctrl, @dev-form-ctrl
+*	Elléments de type champ de texte
+*/
+.form-group .daf-form-ctrl,
+.form-group .dev-form-ctrl {
+	width: auto;
+	height: 25px;
+    line-height: 1.42857143;
+    background-color: #FFFFFF;
+    border: 1px solid #D2D7D3;
+    font-size: 13px;
+    transition: border-color ease-in-out .2s,box-shadow ease-in-out .2s;
+    color: #404041!important;
+}
+.form-group .daf-form-ctrl:focus,
+.form-group .dev-form-ctrl:focus {box-shadow: 0 0 3px #01A7D2;}
+.form-group textarea.daf-form-ctrl,
+.form-group textarea.dev-form-ctrl { min-height: 55px;}
+/*.rd-input-search {
+    line-height: 1.42857143;
+    background-color: #FFFFFF;
+    border: none;
+    width: 250px;
+    padding: 5px 7px;
+    transition: border-color ease-in-out .3s,box-shadow ease-in-out .3s;
+    color: #404041!important;
+}*/
+
+/**
+*   Form buttons
+*	@dev-form-btn, @dev-form-reset-btn
+*	Eléments detype bouttons
+*/
+.dev-form-btn,
+.dev-form-reset-btn {
+    border: 1px solid #39B54A;
+    background-color: #39B54A;
+    box-shadow: none;
+    transition: all .3s;
+    padding: 5px 7px!important;
+    font-family: 'tahoma';
+    color: #FFFFFF;
+    text-decoration: none!important;
+}
+.dev-form-reset-btn {
+    border: 1px solid #D2D7D3;
+    background-color: #D2D7D3;
+    color: #898989;
+}
+.dev-form-btn:focus,
+.dev-form-btn:hover {
+    border: 1px solid #F15624;
+    background-color: #F15624;
+    color: #FFFFFF!important;
+    text-transform: none!important;
+}
+.dev-form-reset-btn:focus,
+.dev-form-reset-btn:hover {
+    border: 1px solid #BDBDBD;
+    background-color: #BDBDBD;
+    color: #404041;
+}
+
+
+/**
+*   Buttons
+*   @dev-btn
+*   Autres type de bouttons
+*/
+.dev-btn {
+    padding: 7px 5px!important;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    letter-spacing: normal!important;
+    cursor: pointer!important;
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .........................  NOTIFICATIONS  ...........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+/**
+*   Notifications
+*   @dev-pop
+*   Initialisation
+*/
+.dev-pop {
+    color: #FFFFFF;
+    font-size: 13px;
+    position: fixed;
+    z-index: 190;
+    bottom: 45px;
+    right: 10px;
+    border-radius: 0;
+    width: 30.85%;
+    transition: .9s;
+}
+
+/**
+    *Notifications elements
+*   @blanco         Couleur des textes en mode notification
+*   @alert-(type)   Type de l'alert appeler
+*   @dot-close      Boutton de fermeture de notification
+*/
+.blanco {
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.blanco:hover {color: #FFFFFF;}
+.alert-danger {background-color: #E74C3C !important;}
+.alert-success {background-color: #1ABC9C !important;}
+.alert-warmed {background-color: #31708F !important;}
+.alert-infos {background-color: #F1C40F !important;}
+.alert-default {background-color: #ECF0F1 !important;}
+.alert-prime {background-color: #2980B9 !important;}
+.alert-linked {background-color: transparent;}
+.dot-close {
+    color: #F7F7F7;
+    padding: 7px 10px;
+}
+.dot-close:hover {
+    background-color: #2980B9;
+    color: #BDC3C7;
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .........................  STYLE D'IMAGE  ...........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Image border raduise
+*   @img-(type)
+*   Désigne le type d'arrondi d'une image
+*/
+.img-square {border-radius: 5px;}
+.img-circle {border-radius: 50%;}
+
+/**
+*   Image size (width)
+*   @img-(xx)
+*   Désigne la taille d'une image
+*/
+.img-zx-plus {width: 25px;}
+.img-zx {width: 35px !important;}
+.img-1x {width: 100px !important;}
+.img-lg {width: 150px !important;}
+.img-2x {width: 200px !important;}
+.img-3x {width: 300px !important;}
+.img-4x {width: 400px !important;}
+.img-5x {width: 500px !important;}
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .........................  STYLE SUR DIV  ...........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Display
+*	Désigne le type d'une div
+*/
+.blocked {display: block!important;}
+.inlined {display: inline!important;}
+.flexed {display: flex!important;}
+
+/**
+*   Position
+*	@absoluted; @relatived, @fixed
+*	Désigne le positionnement d'une div
+*/
+.absoluted {
+    position: absolute;
+    z-index: 3;
+}
+.relatived {position: relative;}
+.fixed {
+    position: fixed;
+    z-index: 10;
+}
+
+/*  Float
+*   @float-(direction)
+*   Désigne le flottement d'une div
+*/
+.float-right {float: right!important;}
+.float-left {float: left!important;}
+
+/**
+*   Valign
+*   @valign-(position)
+*	Désigne le positionnement vertical d'une div
+*/
+.valign-top {vertical-align: top!important;}
+.valign-middle {vertical-align: middle!important;}
+.valign-bottom {vertical-align: bottom!important;}
+
+/**
+*   Opacity
+*	Désigne l'opacité d'une div
+*/
+.invisible {opacity: 0;}
+
+/**
+*   Border
+*	Désigne un type de bordures d'une div
+*/
+.no-border {border: 0 !important;}
+.bordered {border: 1px solid #BDC3C7;}
+.danger-bordered {border: 1px solid #E74C3C;}
+
+/**
+*   Box raduise
+*   @(type)-raduised
+*	Désigne un type d'arrondissement des bordures d'une div
+*/
+.min-raduised {border-radius: 3px;}
+.moy-raduised {border-radius: 5px;}
+.max-raduised {border-radius: 10px;}
+.circle-raduised {border-radius: 50%;}
+
+/**
+*   Top border
+*	Créer une bordure en haut d'une div
+*/
+.top-border {border-top: 1px solid #ECF0F1;}
+.top-border-plus {border-top: 1px solid #BDC3C7;}
+.top-border-white {border-top: 1px solid #F7F7F7;}
+
+/**
+*   Left border
+*	Créer une bordure à gauche d'une div
+*/
+.left-border {border-left: 1px solid #ECF0F1;}
+.left-border-plus {border-left: 1px solid #BDC3C7;}
+.left-border-white {border-left: 1px solid #F7F7F7;}
+
+/**
+*   BRight border
+*	Créer une bordure à droite d'une div
+*/
+.right-border {border-right: 1px solid #ECF0F1;}
+.right-border-plus {border-right: 1px solid #BDC3C7;}
+.right-border-white {border-right: 1px solid #F7F7F7;}
+
+/**
+*   Bottom border
+*	Créer une bordure en bas d'une div
+*/
+.bottom-border {border-bottom: 1px solid #ECF0F1;}
+.bottom-border-plus {border-bottom: 1px solid #BDC3C7;}
+.bottom-border-white {border-bottom: 1px solid #F7F7F7;}
+
+/**
+*   Divider
+*   @top-divider    Diviseur en haut
+*   @divider
+*   @divider-grey   Disviseur zn bas
+*/
+.top-divider {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #BDC3C7;
+}
+.divider-grey,
+.divider {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #BDC3C7;
+}
+
+/**
+*   Div height
+*   @dev-bh-(xx)
+*   Permet de gérer la taile d'une div
+*/
+.dev-bh-35x {height: 35px!important;}
+.dev-bh-45x {height: 45px!important;}
+.dev-bh-50x {height: 50px!important;}
+.dev-bh-100x {height: 100px!important;}
+.dev-bh-150x {height: 150px!important;}
+.dev-bh-200x {height: 200px!important;}
+.dev-bh-250x {height: 250px!important;}
+.dev-bh-300x {height: 300px!important;}
+.dev-bh-400x {height: 400px!important;}
+.dev-bh-500x {height: 500px!important;}
+.dev-bh-600x {height: 600px!important;}
+.dev-bh-700x {height: 700px!important;}
+.dev-bh-800x {height: 800px!important;}
+.dev-bh-900x {height: 900px!important;}
+.dev-bh-1000x {height: 1000px!important;}
+.dev-bh-100pct {height: 100%!important;}
+
+/**
+*   Clear
+*	@clearer; @clearer-left, @clearer-right, @clearfix
+*/
+.clearer {clear: both;}
+.clearer-left {clear: left;}
+.clearer-right {clear: right;}
+.clearfix {overflow: auto;}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .............................  MARGES  ..............................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Margin
+*	@no-margin
+*	Supprime les marges externes d'une div (Permet de centrer une div)
+*/
+.no-margin {margin: 0 auto !important;}
+
+/**
+*   Padding
+*	@no-padding
+*	Supprime les marges internes d'une div
+*/
+.no-padding {padding: 0 !important;}
+
+/**
+*   Margin top
+*	@margin-top-(xx)
+*	Designe la marge externe en haut d'une div
+*/
+.margin-top-zxx {margin-top: 10px!important;}
+.margin-top-zx {margin-top: 15px!important;}
+.margin-top-zx-plus {margin-top: 25px!important;}
+.margin-top-1x {margin-top: 35px!important;}
+.margin-top-1x-plus {margin-top: 45px!important;}
+.margin-top-lg {margin-top: 50px!important;}
+.margin-top-lg-plus {margin-top: 75px!important;}
+.margin-top-2x {margin-top: 100px!important;}
+.margin-top-2x-plus {margin-top: 125px!important;}
+.margin-top-3x {margin-top: 150px!important;}
+.margin-top-4x {margin-top: 200px!important;}
+.margin-top-5x {margin-top: 300px!important;}
+.margin-top-6x {margin-top: 400px!important;}
+
+/**
+*   Margin left
+*	@margin-left-(xx)
+*	Designe la marge externe à gauche d'une div
+*/
+.margin-left-zxx {margin-left: 10px!important;}
+.margin-left-zx {margin-left: 15px!important;}
+.margin-left-zx-plus {margin-left: 25px!important;}
+.margin-left-1x {margin-left: 35px!important;}
+.margin-left-1x-plus {margin-left: 45px!important;}
+.margin-left-lg {margin-left: 50px!important;}
+.margin-left-lg-plus {margin-left: 75px!important;}
+.margin-left-2x {margin-left: 100px!important;}
+.margin-left-2x-plus {margin-left: 125px!important;}
+.margin-left-3x {margin-left: 150px!important;}
+.margin-left-4x {margin-left: 200px!important;}
+.margin-left-5x {margin-left: 300px!important;}
+.margin-left-6x {margin-left: 400px!important;}
+
+/**
+*   Margin right
+*	@margin-right-(xx)
+*	Designe la marge externe à droite d'une div
+*/
+.margin-right-zxx {margin-right: 10px!important;}
+.margin-right-zx {margin-right: 15px!important;}
+.margin-right-zx-plus {margin-right: 25px!important;}
+.margin-right-1x {margin-right: 35px!important;}
+.margin-right-1x-plus {margin-right: 45px!important;}
+.margin-right-lg {margin-right: 50px!important;}
+.margin-right-lg-plus {margin-right: 75px!important;}
+.margin-right-2x {margin-right: 100px!important;}
+.margin-right-2x-plus {margin-right: 125px!important;}
+.margin-right-3x {margin-right: 150px!important;}
+.margin-right-4x {margin-right: 200px!important;}
+.margin-right-5x {margin-right: 300px!important;}
+.margin-right-6x {margin-right: 400px!important;}
+
+/**
+*   Margin bottom
+*	@margin-bottom-(xx)
+*	Designe la marge externe en bas d'une div
+*/
+.margin-bottom-zxx {margin-bottom: 10px!important;}
+.margin-bottoms-zx {margin-bottom: 15px!important;}
+.margin-bottoms-zx-plus {margin-bottom: 25px!important;}
+.margin-bottoms-1x {margin-bottom: 35px!important;}
+.margin-bottoms-1x-plus {margin-bottom: 45px!important;}
+.margin-bottom-lg {margin-bottom: 50px!important;}
+.margin-bottom-lg-plus {margin-bottom: 75px!important;}
+.margin-bottom-2x {margin-bottom: 100px!important;}
+.margin-bottom-2x-plus {margin-bottom: 125px!important;}
+.margin-bottom-3x {margin-bottom: 150px!important;}
+.margin-bottom-4x {margin-bottom: 200px!important;}
+.margin-bottom-5x {margin-bottom: 300px!important;}
+.margin-bottom-6x {margin-bottom: 400px!important;}
+
+
+/**
+*   Dev padding
+*	@dev-padding(-xx)
+*	Designe la marge interne d'une div
+*/
+.dev-padding {padding: 10px 12px!important;}
+.dev-padding-zx {padding: 7px 12px!important;}
+
+/**
+*   Padding top
+*	@padding-top(-xx)
+*	Designe la marge interne en haut d'une div
+*/
+.padding-top-zx {padding-top: 7px !important;}
+.padding-top-1x {padding-top: 10px !important;}
+.padding-top-2x {padding-top: 25px !important;}
+.padding-top-lg {padding-top: 35px !important;}
+.padding-top-3x {padding-top: 50px !important;}
+.padding-top-4x {padding-top: 75px !important;}
+.padding-top-5x {padding-top: 100px !important;}
+
+/**
+*   Padding left
+*	@padding-left(-xx)
+*	Designe la marge interne à gauche d'une div
+*/
+.padding-left-zx {padding-left: 7px !important;}
+.padding-left-1x {padding-left: 12px !important;}
+.padding-left-2x {padding-left: 25px !important;}
+.padding-left-lg {padding-left: 35px !important;}
+.padding-left-3x {padding-left: 50px !important;}
+.padding-left-4x {padding-left: 75px !important;}
+.padding-left-5x {padding-left: 105px !important;}
+
+/**
+*   Padding right
+*	@padding-right(-xx)
+*	Designe la marge interne à droite d'une div
+*/
+.padding-right-zx {padding-right: 7px !important;}
+.padding-right-1x {padding-right: 12px !important;}
+.padding-right-2x {padding-right: 25px !important;}
+.padding-right-lg {padding-right: 35px !important;}
+.padding-right-3x {padding-right: 50px !important;}
+.padding-right-4x {padding-right: 75px !important;}
+.padding-right-5x {padding-right: 105px !important;}
+
+/**
+*   Padding bottom
+*	@padding-bottom(-xx)
+*	Designe la marge interne en bas d'une div
+*/
+.padding-bottom-zx {padding-bottom: 7px !important;}
+.padding-bottom-1x {padding-bottom: 10px !important;}
+.padding-bottom-2x {padding-bottom: 25px !important;}
+.padding-bottom-lg {padding-bottom: 35px !important;}
+.padding-bottom-3x {padding-bottom: 50px !important;}
+.padding-bottom-4x {padding-bottom: 75px !important;}
+.padding-bottom-5x {padding-bottom: 100px !important;}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .........................  STYLE DE TEXTE  ..........................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Font size
+*   @text-size-(xx)
+*   Désigne la taille du texte
+*/
+.text-size-xxs {font-size: 10px!important;}
+.text-size-xs {font-size: 12px!important;}
+.text-size-zx {font-size: 13px;}
+.text-size-1x {font-size: 16px;}
+.text-size-lg {font-size: 18px;}
+.text-size-1x-plus {font-size: 22px;}
+.text-size-2x {font-size: 28px;}
+.text-size-3x {font-size: 38px;}
+.text-size-4x {font-size: 48px;}
+.text-size-5x {font-size: 58px;}
+
+/**
+*   Text align
+*   @align-(position)
+*   Désigne l'alignement du texte
+*/
+.align-left {text-align: left!important;}
+.align-right {text-align: right!important;}
+.align-center {text-align: center!important;}
+.align-justify {text-align: justify!important;}
+
+/**
+*   Font style
+*   @bolder     Texte en gras,
+*   @italick    texte en italique
+*/
+.bolder {font-weight: bold!important;}
+.italick {font-style: italic!important;}
+
+/**
+*   Text trabsform
+*   @text-uppercase     Texte entier Majuscule,
+*   @text-capitalize    Première lettre des mots du texte en Majuscule
+*   @text-lowercase     Texte entier en Minuscule
+*/
+.text-uppercase {text-transform: uppercase!important;}
+.text-capitalize {text-transform: capitalize!important;}
+.text-lowercase {text-transform: lowercase!important;}
+
+/**
+*   Text decoration
+*   @text-(type)
+*   Désigne le type de surlignement du texte
+*/
+.text-underline {text-decoration: underline!important;}
+.text-unerderline {text-decoration: none!important;}
+.text-dashed {text-decoration: dashed!important;}
+.text-dotted {text-decoration: dotted!important;}
+.text-double {text-decoration: double!important;}
+.text-blink {text-decoration: blink!important;}
+.text-throug {text-decoration: line-through!important;}
+.text-overline {text-decoration: overline!important;}
+
+/**
+*   Cursor
+*   @cur-to-point
+*   Force l'état initial du curseur à prendre la forme du "pointer"
+*/
+.cur-to-point {cursor: pointer;}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    ..............................  TABS  ...............................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Tab
+*	@dev-tabs-wrap
+*	Initialisation du système
+*/
+.dev-tabs-wrap {
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    float: left;
+}
+
+/**
+*   Tabs
+*	@dev-tabs
+*	Paramètre de création du système de tabs
+*/
+.dev-tabs {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+.dev-tabs:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.dev-tabs li {float: left;}
+.dev-tabs li > input {display: none;}
+
+.dev-tabs li > label a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+.dev-tabs li > label a {
+    border: 1px solid #FFFFFF;
+    border-bottom-color: #BDC3C7;
+}
+.dev-tabs li:last-child > label a {
+    border: 1px solid #FFFFFF;
+    border-bottom-color: #BDC3C7;
+}
+.dev-tabs li > input:checked + label a {
+    border: 1px solid #BDC3C7;
+    border-bottom-color: #FFFFFF;
+}
+.dev-tabs-content {
+    display: block;
+    border-top: 1px solid #BDC3C7;
+    padding: 15px 0;
+    position: relative;
+    top: -11px;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    .........................  COLORATION  ..............................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Backround color
+*	@dev-bgc-(color)
+*	Designe la couleur de fond d'une div
+*/
+.dev-bgc-black {background-color: #404041!important;}
+.dev-bgc-white {background-color: #FFFFFF!important;}
+.dev-bgc-grey {background-color: #DADFE2!important;}
+.dev-bgc-gris {background-color: #F9F9FB!important;}
+.dev-bgc-strong-green {background-color: #27AE60!important;}
+.dev-bgc-green-dev {background-color: #38B449!important;}
+.dev-bgc-danger, .dev-bgc-strong-red {background-color: #C0392B!important;}
+.dev-bgc-red {background-color: #E74C3C!important;}
+.dev-bgc-strong-orange {background-color: #D35400!important;}
+.dev-bgc-orange {background-color: #F15624!important;}
+.dev-bgc-purple {background-color: #B02371!important;}
+.dev-bgc-soft-purple {background-color: #8E44AD!important;}
+.dev-bgc-strong-blue {background-color: #2980B9!important;}
+.dev-bgc-blue {background-color: #01A7D2!important;}
+.dev-bgc-gold {background-color: #AF9453!important;}
+.dev-bgc-info {background-color: #F1C40F!important;}
+.dev-bgc-yellow {background-color: #F9C41C!important;}
+.dev-bgc-strong-midnight {background-color: #2C3E50!important;}
+.dev-bgc-midnight {background-color: #34495E!important;}
+.dev-bgc-transparent {background-color: transparent!important;}
+
+/**
+*   Fonts color
+*	@dev-color-(color)
+*	Designe la couleur du texte
+*/
+.dev-color-grey {color: #898989!important;}
+.dev-color-white {color: #F7F7F7!important;}
+.dev-color-strong-green {color: #27AE60!important;}
+.dev-color-green-dev {color: #39B54A!important;}
+.dev-color-strong-red {color: #C0392B!important;}
+.dev-color-red {color: #E74C3C!important;}
+.dev-color-strong-orange {color: #D35400!important;}
+.dev-color-orange {color: #F15624!important;}
+.dev-color-purple {color: #B02371!important;}
+.dev-color-soft-purple {color: #8E44AD!important;}
+.dev-color-strong-blue {color: #2980B9!important;}
+.dev-color-blue {color: #01A7D2!important;}
+.dev-color-gold {color: #AF9453!important;}
+.dev-color-info {color: #F1C40F!important;}
+.dev-color-yellow {color: #F9C41C!important;}
+.dev-color-strong-midnight {color: #2C3E50!important;}
+.dev-bgc-midnight {color: #34495E!important;}
+.dev-color-transparent {color: transparent!important;}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////
+    .....................................................................
+    ..........................  DEV SLIDE  ..............................
+    .....................................................................
+////////////////////////////////////////////////////////////////////////////*/
+
+/**
+*   Dev slide
+*   @dev-slide-content
+*   Initialisation
+*/
+.dev-slide-content {
+    max-width: 100%;
+    margin: auto
+}
+.dev-slide-container:after {
+    content: "";
+    display: table;
+    clear: both
+}
+/*.dev-slide-container {padding: 0.01em 16px}*/
+
+/**
+*   Slide padding
+*   @dev-slide-padding-(xx)
+*/
+.dev-slide-padding-16x {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important
+}
+.dev-slide-padding-5x {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important
+}
+
+/**
+*   Slide display
+*   @dev-slide-display-container
+*/
+.dev-slide-display-container{position: relative}
+
+/**
+*   Slide display (direction)
+*   @dev-slide-display-(direction)
+*/
+.dev-slide-display-bottomleft{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 95.8%;
+
+}
+.dev-slide-display-bottomright{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 95.8%;
+
+}
+.dev-slide-display-topleft{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 95.8%;
+
+}
+.dev-slide-display-topright{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 95.8%;
+
+}
+
+/**
+*   Slide sectoion
+*   @dev-slide-section
+*/
+.dev-slide-section{
+    margin-top: 10px!important;
+    margin-bottom: 10px!important
+}
+
+/**
+*   Slide badge
+*   @dev-slide-badge
+*   Points de reperage de l'avancement du slide
+*/
+.dev-slide-badge{
+    color: #FFFFFF;
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+    border: 1px  solid;
+}
+.dev-slide-badge {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+/**
+*   Slide Others things
+*   @xxx
+*/
+.dev-slide-blue{
+     color: #0096DB!important;
+     background-color: #0096DB!important
+ }
+.dev-slide-left{
+    float: left!important
+}
+.dev-slide-right{
+    float: right!important
+}
+.dev-slide-left, .dev-slide-right, .dev-slide-badge {cursor: pointer}
+
+/**
+*   DevSlides
+*   @devSlides
+*   Conteneur de slide
+*/
+.devSlides {width: 100%;}
+
+/**
+*   Slide animation
+*   @dev-slide-(animation type)
+*   Les différents types d'animations
+*/
+.dev-slide-animate-fading{
+    -webkit-animation: fading 7s infinite;
+    animation: fading 7s infinite
+}
+@-webkit-keyframes fading{0%{opacity:0}70%{opacity:1}100%{opacity:0}}
+@keyframes fading{0%{opacity:0}70%{opacity:1}100%{opacity:0}}
+
+.dev-slide-animate-opacity{
+    -webkit-animation: opac 1s;
+    animation: opac 1s
+}
+@-webkit-keyframes opac{from{opacity:1} to{opacity:1}}
+@keyframes opac{from{opacity:1} to{opacity:1}}
+
+.dev-slide-animate-top{
+    position: relative;
+    -webkit-animation: animatetop .3s;
+    animation: animatetop .3s
+}
+@-webkit-keyframes animatetop{from{top:-100px;opacity:0} to{top:0;opacity:1}}
+@keyframes animatetop{from{top:-100px;opacity:0} to{top:0;opacity:1}}
+
+.dev-slide-animate-left{
+    position: relative;
+    -webkit-animation: animateleft .3s;
+    animation: animateleft .3s;
+}
+@-webkit-keyframes animateleft{from{left:10px;opacity:0} to{left:0;opacity:1}}
+@keyframes animateleft{from{left:10px;opacity:0} to{left:0;opacity:1}}
+
+.dev-slide-animate-right{
+    position: relative;
+    -webkit-animation: animateright .3s;
+    animation: animateright .3s;
+}
+@-webkit-keyframes animateright{from{right:10px;opacity:0} to{right:0;opacity:1}}
+@keyframes animateright{from{right:10px;opacity:0} to{right:0;opacity:1}}
+
+.dev-slide-animate-bottom{
+    position: relative;
+    -webkit-animation: animatebottom .3s;
+    animation: animatebottom .3s;
+}
+@-webkit-keyframes animatebottom{from{bottom:10px;opacity:0} to{bottom:0px;opacity:1}}
+@keyframes animatebottom{from{bottom:10px;opacity:0} to{bottom:0;opacity:1}}
+
+.dev-slide-animate-zoom {
+    -webkit-animation: animatezoom .3s;
+    animation: animatezoom .3s;
+}
+@-webkit-keyframes animatezoom{from{-webkit-transform:scale(0)} to{-webkit-transform:scale(1)}}
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+
+
+
+
+
+
+
+
+/***/
