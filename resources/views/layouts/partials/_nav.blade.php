@@ -3,8 +3,8 @@
     <div class="in-header" id="myHeader">
 
         <a href="{{ route('home') }}" class="logo">Laracarte</a>
-        <a href="{{ route('home') }}" class="liens">Home</a>
-        <a href="{{ route('about') }}" class="liens">About</a>
+        <a href="{{ route('home') }}" class="liens{{ set_active_route('home') }}">Home</a>
+        <a href="{{ route('about') }}" class="liens{{ set_active_route('about') }}">About</a>
         <a href="#" class="liens">Artisans</a>
         <div class="dropdown">
             <button href="#" class="dropbtn">Planet

@@ -94,18 +94,18 @@
 .inverse .dropdown:hover > .dropbtn,
 .inverse .in-header .dropdown .dropbtn:hover {
     background-color: transparent!important;
-    color: #09C!important;
+    color: #0099CC!important;
 }
 .inverse .in-header .dropdown-content a:hover {
-    background-color: #09C!important;
+    background-color: #0099CC!important;
     color: #F7F7F7!important;
 }
 .dropdown:hover .dropdown-content {display: block;}
 .in-header a.logo:hover {
     background-color: transparent!important;
-    color: #A5A5A5;
+    color: #A5A5A5!important;
 }
-.in-header a.link-active {color: #663694;}
+.in-header a.liens.link-active {color: #0099CC!important;}
 .header .icon {display: none;}
 @media screen and (max-width: 1024px) {
     .header a:not(:nth-child(2)),
@@ -172,7 +172,7 @@ hr.hrstyle {
 }
 .btn-link,
 .btn-link:hover {
-    color: #09c;
+    color: #0099CC;
 }
 .btn {
     font-family: Tahoma!important;
@@ -229,7 +229,7 @@ hr.hrstyle {
 .pagination li.page-item a.page-link,
 .pagination li.active a,
 .pagination li a {
-    color: #09c;
+    color: #0099CC;
     padding: 7px 12px;
     font-size: 12px!important;
     text-decoration: none;
@@ -246,7 +246,7 @@ hr.hrstyle {
 }
 .pagination a:hover {
     background: #ECF0F1;
-    color: #09c;
+    color: #0099CC;
 }
 .pagination li.page-item.disabled:first-child span {
     border-radius: 3px 0 0 3px!important;
@@ -278,9 +278,9 @@ hr.hrstyle {
     border-radius: 0 3px 3px 0!important;
 }
 .pagination li.active span {
-    background-color: #09c;
-    border-top: .5px solid #09c!important;
-    border-bottom: .5px solid #09c!important;
+    background-color: #0099CC;
+    border-top: .5px solid #0099CC!important;
+    border-bottom: .5px solid #0099CC!important;
     color: #F7F7F7;
     padding: 7px 12px;
     font-size: 12px!important;
