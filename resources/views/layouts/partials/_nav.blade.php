@@ -2,7 +2,7 @@
 
     <div class="in-header" id="myHeader">
 
-        <a href="{{ route('home') }}" class="logo">Laracarte</a>
+        <a href="{{ route('home') }}" class="logo">{{ config('app.name') }}</a>
         <a href="{{ route('home') }}" class="liens{{ set_active_route('home') }}">Home</a>
         <a href="{{ route('about') }}" class="liens{{ set_active_route('about') }}">About</a>
         <a href="#" class="liens">Artisans</a>

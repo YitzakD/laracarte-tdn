@@ -4,8 +4,8 @@
 
     <div class="blocked no-margin font-open-sans">
     	
-    	<h1 class="laracarteh1">What's is Laracarte?</h1>
-    	<p>Laracarte is a clone app of <a href="" class="btn-link" target="_blank">Laramap.com.</a></p>
+    	<h1 class="laracarteh1">What's is {{ config('app.name') }}?</h1>
+    	<p>{{ config('app.name') }} is a clone app of <a href="" class="btn-link" target="_blank">Laramap.com.</a></p>
     	<div class="dev-row">
     		<div class="dev-col-6x">
     			<p class="alert alert-info text-size-zx">
@@ -23,7 +23,7 @@
 
     	<hr class="hrstyle margin-top-1x margin-bottoms-1x">
 
-    	<h1 class="laracarteh1">Which tools and services are used in Laracarte?</h1>
+    	<h1 class="laracarteh1">Which tools and services are used in {{ config('app.name') }}?</h1>
     	<p>Basicly it's built on Laravel &amp; DAF-Style. But there's a bunch of services used form email and other sections.</p>
     	<ul class="laracarte-ul text-size-zx">
     		<li>Laravel</li>
