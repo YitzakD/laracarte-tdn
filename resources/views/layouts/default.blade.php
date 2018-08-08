@@ -11,7 +11,7 @@
 	    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-        <title>Laracarte</title>
+        <title>{{ page_title($title ?? '') }}</title>
     </head>
     <body>
     	@include('layouts.partials._nav')
