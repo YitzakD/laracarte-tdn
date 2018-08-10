@@ -192,19 +192,24 @@ hr.hrstyle {
     padding: .5% .7%!important;
     font-size: 12px;
 }
+
 .help-block {
     display: block;
     font-size: 12px;
     color: #909091;
     margin-top: 3px;
 }
+
+.has-error > .label-ctrl {
+    color: #E74C3C!important;
+}
 .has-error > .dev-form-ctrl {
+    border: 1px solid #E74C3C!important;
     box-shadow: 0 0 3px #E74C3C!important;
 }
 .has-error > .help-block {
     color: #E74C3C!important;
 }
-
 /*--------------------------------------------
 *-
 *-          Pagination

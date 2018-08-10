@@ -19,7 +19,7 @@
                 <a href="https://larachat.com">Larachat</a>
             </div>
         </div>
-        <a href="{{-- route('contact') --}}" class="liens">Contact</a>
+        <a href="{{ route('contact') }}" class="liens{{ set_active_route('contact') }}">Contact</a>
         <div class="liens-right">
             <a href="#" class="liens">Login</a>
             <a href="#" class="liens">Register</a>  

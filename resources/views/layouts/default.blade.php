@@ -16,7 +16,7 @@
     <body>
     	@include('layouts.partials._nav')
 
-    	<div class="container">
+    	<div class="container clearfix">
         	@yield('content')
     	</div>
 
