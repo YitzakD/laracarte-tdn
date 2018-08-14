@@ -27,3 +27,14 @@ if(!function_exists('set_active_route')) {
 		return Route::is($route) ? ' link-active' : '';
 	}
 }
+
+/**
+ * @param $message, $type
+ */
+if(!function_exists('flash')) {
+	function flashy($message, $type = 'success')
+	{
+		Session::flash('notification.message', $message);
+		Session::flash('notification.type', $type);
+	}
+}

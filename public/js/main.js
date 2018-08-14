@@ -6,12 +6,6 @@ $(document).ready(function(){
 
     // MAIN
 
-    /* About scrollers -> qui affiche les scrollers adaptés */
-    $("body").niceScroll({styler:"fb", cursorcolor:"#B6B6B4", cursorborder:"#B6B6B4", zindex:"700", cursorborderradius:"3px"});
-
-
-
-
     /* About Flash Notifs -> Pour la fermeture de pop-ups des alertes */
     $(".dot-close").click(function() {
 

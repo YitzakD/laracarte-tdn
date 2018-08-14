@@ -14,13 +14,24 @@
         <title>{{ page_title($title ?? '') }}</title>
     </head>
     <body>
-    	@include('layouts.partials._nav')
+        @if(session()->has('notification.message'))
+        <div class="dev-pop alert-{{ session('notification.type') }}" id="pop">
+            <span class="blocked align-right" id="fp">
+                <i class="fa fa-close dot-close cur-to-point" id="js-dot-close"></i>
+            </span>
+            <p class="blocked dev-padding-zx">
+                {{ session('notification.message') }}
+            </p>
+        </div>
+        @endif
+        
+        @include('layouts.partials._nav')
 
     	<div class="container clearfix">
         	@yield('content')
     	</div>
 
-    	@include('layouts.partials._footer')
+        @include('layouts.partials._footer')
         
         <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('js/Elastic/jquery.elastic.source.js') }}"></script>

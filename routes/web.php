@@ -11,10 +11,17 @@
 |
 */
 
+use App\Mail\ContactMessageCreated;
+
 Route::get('/', [
 	'as' => 'home',
 	'uses' => 'PagesController@home'
 ]);
+
+Route::get('/test-email', function() {
+	return new ContactMessageCreated('Yitzak DEKPEMOU', 'yitzak01@gmail.com', 'Merci pour Laracarte.');
+});
+
 
 Route::get('/about', [
 	'as' => 'about',
